@@ -12,6 +12,8 @@ namespace ColoredButtons
 {
     public partial class Form1 : Form
     {
+        //original measurements of buttons
+        
         private Rectangle 
         
         public Form1() 
