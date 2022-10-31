@@ -1,4 +1,7 @@
-﻿using System;
+﻿/*Task 1: Необходимо разработать приложение содержащее набор кнопок, 
+занимающих 2/3 ширины окна при любых его размерах*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
