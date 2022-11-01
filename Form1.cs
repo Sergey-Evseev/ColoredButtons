@@ -12,7 +12,9 @@ namespace ColoredButtons
 {
     public partial class Form1 : Form
     {
-        //original measurements of buttons
+        //original measurements of buttons (X,Y, width, height)
+        //в виде полей класса Rectangle
+        //*Stores a set of four integers that represent the location and size of a rectangle
         private Rectangle button1originalRect;
         private Rectangle button2originalRect;
         private Rectangle button3originalRect;
@@ -31,13 +33,19 @@ namespace ColoredButtons
         private Rectangle button16originalRect;
         private Rectangle button17originalRect;
 
-        //original dimensions of the form
-        private Point
+        //original dimensions of the form (width and height)
+        //поле класса Size для хранения первоначальных размеров формы
+        private Size formOriginalSize;
         
         public Form1() 
         {
             InitializeComponent();
+        }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //Size gets or sets the size of the form.
+            formOriginalSize = this.Size;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -50,9 +58,6 @@ namespace ColoredButtons
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
