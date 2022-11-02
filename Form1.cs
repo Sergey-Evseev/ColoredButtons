@@ -139,6 +139,7 @@ namespace ColoredButtons
         }
 
         //при изменинии формы будет генериться событие и вызываться метод 
+        //изменения параметров кнопок
         private void Form1_Resize(object sender, EventArgs e)
         {
             resizeFormControls();
