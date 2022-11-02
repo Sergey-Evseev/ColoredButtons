@@ -87,9 +87,10 @@ namespace ColoredButtons
                 button17.Width, button17.Height);
         }
         //при увеличении формы будут пропорционально увеличиваться все параметры кнопок
-        private void resizeFormControls(float xRatio, float yRatio)
+        private void resizeFormControls()
         {
-            
+            //передаем параметры элемента в структуре Rectangle и сам элемент класса control 
+            resizeControl();
         }
         
         //вспомогательный метод для вычисления новых координат и размеров
@@ -103,13 +104,21 @@ namespace ColoredButtons
 
             //вычисляем новые координаты и размеры кнопок
             //приводим обратно к инту, поскольку структура Rectangle принимает инты
-            //(private int x; private int y; private int width; private int height;)
+            //*private int x; private int y; private int width; private int height;
             int newX = (int)(control.Location.X * xRatio);
             int newY = (int)(control.Location.Y * yRatio);
             int newWidth = (int)(control.Size.Width * xRatio);
             int newHeight = (int)(control.Size.Height * yRatio);
 
+            //устанавливаем новые координаты элемента
+            //класс Location: gets or sets the coordinates of the upper-left corner of the
+            //control relative to the upper-left corner of its container.
             control.Location = new Point(newX, newY);
+
+            //устанавливаем новые размеры элемента
+            //*структура Size Gets a System.Drawing.Size structure that has
+            //a System.Drawing.Size.Height and System.Drawing.Size.Width
+            control.Size = new Size(newWidth, newHeight);
 
         }
 
