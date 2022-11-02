@@ -86,13 +86,7 @@ namespace ColoredButtons
             button17originalRect = new Rectangle(button17.Location.X, button17.Location.Y,
                 button17.Width, button17.Height);
         }
-        //при увеличении формы будут пропорционально увеличиваться все параметры кнопок
-        private void resizeFormControls()
-        {
-            //передаем параметры элемента в структуре Rectangle и сам элемент класса control 
-            resizeControl();
-        }
-        
+                
         //вспомогательный метод для вычисления новых координат и размеров
         //принимает объект (структуру) Rectangle с параметрами кнопок и сам элемент управления
         private void resizeControl(Rectangle originalControlRect, Control control)
@@ -119,8 +113,31 @@ namespace ColoredButtons
             //*структура Size Gets a System.Drawing.Size structure that has
             //a System.Drawing.Size.Height and System.Drawing.Size.Width
             control.Size = new Size(newWidth, newHeight);
-
         }
+        
+        //при увеличении формы будут пропорционально увеличиваться все параметры кнопок
+        private void resizeFormControls()
+        {
+            //передаем параметры элемента в структуре Rectangle и сам элемент класса control 
+            resizeControl(button1originalRect, button1);
+            resizeControl(button2originalRect, button2);
+            resizeControl(button3originalRect, button3);
+            resizeControl(button4originalRect, button4);
+            resizeControl(button5originalRect, button5);
+            resizeControl(button6originalRect, button6);
+            resizeControl(button7originalRect, button7);
+            resizeControl(button8originalRect, button8);
+            resizeControl(button9originalRect, button9);
+            resizeControl(button10originalRect, button10);
+            resizeControl(button11originalRect, button11);
+            resizeControl(button12originalRect, button12);
+            resizeControl(button13originalRect, button13);
+            resizeControl(button14originalRect, button14);
+            resizeControl(button15originalRect, button15);
+            resizeControl(button16originalRect, button16);
+            resizeControl(button17originalRect, button17);
+        }
+
 
     } //end of public partial class Form1 : Form 
 } //end of namespace ColoredButtons
